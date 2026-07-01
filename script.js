@@ -1,3 +1,13 @@
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.addEventListener("pageshow", () => {
+  if (!window.location.hash) {
+    window.scrollTo(0, 0);
+  }
+});
+
 const form = document.querySelector(".booking-form");
 
 form?.addEventListener("submit", (event) => {

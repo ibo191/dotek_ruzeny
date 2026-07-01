@@ -756,6 +756,15 @@ textarea:focus {
   .hero {
     min-height: auto;
     padding-top: 80px;
+    background: var(--olive);
+  }
+
+  .hero .container {
+    padding-inline: 24px;
+  }
+
+  .hero::before {
+    display: none;
   }
 
   .hero__grid,
@@ -768,7 +777,18 @@ textarea:focus {
   }
 
   .hero__visual {
-    max-width: 560px;
+    width: min(100%, 440px);
+    max-width: 440px;
+    justify-self: start;
+  }
+
+  .hero__visual img {
+    aspect-ratio: 1.25;
+    max-height: none;
+  }
+
+  .hero__texture {
+    inset: 22px 18px -18px -18px;
   }
 
   .help-grid,
@@ -801,7 +821,24 @@ textarea:focus {
   }
 
   .hero {
-    padding: 62px 0 54px;
+    padding: 52px 0 54px;
+  }
+
+  .hero .container {
+    padding-inline: 16px;
+  }
+
+  .hero__grid {
+    gap: 32px;
+  }
+
+  .hero h1 {
+    font-size: 2.58rem;
+    line-height: 1.08;
+  }
+
+  .hero__copy {
+    gap: 22px;
   }
 
   .hero__actions,
@@ -818,7 +855,14 @@ textarea:focus {
   }
 
   .hero__visual img {
-    min-height: 380px;
+    aspect-ratio: 1.3;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .hero__texture {
+    inset: 16px 12px -12px -12px;
   }
 
   .pricing-row {
