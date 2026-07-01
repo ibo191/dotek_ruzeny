@@ -164,6 +164,12 @@ p {
     linear-gradient(90deg, var(--olive) 0 74%, var(--sand) 74% 100%);
 }
 
+.hero .container {
+  width: 100%;
+  max-width: none;
+  padding-inline: clamp(24px, 4vw, 72px);
+}
+
 .hero::before {
   position: absolute;
   top: -180px;
@@ -177,7 +183,7 @@ p {
 .hero__grid {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(340px, 0.82fr);
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.82fr);
   align-items: center;
   gap: 72px;
 }
