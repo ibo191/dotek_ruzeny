@@ -899,6 +899,26 @@ textarea:focus {
   font-size: 0.74rem;
 }
 
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--cream);
+  color: var(--muted);
+}
+
+.site-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 22px;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: var(--olive);
+  font-weight: 800;
+}
+
 @media (max-width: 920px) {
   .site-header {
     grid-template-columns: 1fr auto;
