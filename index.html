@@ -197,7 +197,7 @@
             <h2 id="pricing-title">Ceník služeb</h2>
             <p>Transparentní ceny bez skrytých poplatků.</p>
           </div>
-          <div class="pricing-table" role="table" aria-label="Ceník masáží">
+          <div class="pricing-table" role="table" aria-label="Ceník masáží" data-pricing-table>
             <div class="pricing-row pricing-row--head" role="row">
               <span>Služba</span>
               <span>Doba trvání</span>
@@ -327,6 +327,37 @@
             </p>
             <a href="tel:+420123456789">+420 123 456 789</a>
             <a href="mailto:info@dotekruzeny.cz">info@dotekruzeny.cz</a>
+            <div class="booking-calendar" aria-label="Objednávací kalendář">
+              <div class="calendar-toolbar">
+                <div>
+                  <span class="eyebrow">Volné termíny</span>
+                  <h3>Vyberte den a čas</h3>
+                </div>
+                <select class="calendar-service" aria-label="Typ masáže v kalendáři">
+                  <option>Klasická masáž zad a šíje</option>
+                  <option>Sportovní masáž</option>
+                  <option>Maderoterapie</option>
+                  <option>Lymfatická masáž</option>
+                </select>
+              </div>
+              <div class="calendar-monthbar">
+                <button type="button" class="calendar-nav" data-calendar-prev aria-label="Předchozí měsíc">‹</button>
+                <strong data-calendar-month></strong>
+                <button type="button" class="calendar-nav" data-calendar-next aria-label="Další měsíc">›</button>
+              </div>
+              <div class="calendar-weekdays" aria-hidden="true">
+                <span>Po</span>
+                <span>Út</span>
+                <span>St</span>
+                <span>Čt</span>
+                <span>Pá</span>
+                <span>So</span>
+                <span>Ne</span>
+              </div>
+              <div class="calendar-grid" data-calendar-grid></div>
+              <div class="time-slots" data-time-slots aria-live="polite"></div>
+              <p class="calendar-selection" data-calendar-selection>Vybraný termín se zobrazí zde.</p>
+            </div>
           </div>
           <form class="booking-form">
             <div class="form-row">
@@ -341,7 +372,7 @@
             </div>
             <label>
               Typ masáže
-              <select name="service" required>
+              <select name="service" id="booking-service" required>
                 <option>Klasická masáž zad a šíje</option>
                 <option>Sportovní masáž</option>
                 <option>Maderoterapie</option>
@@ -350,7 +381,7 @@
             </label>
             <label>
               Preferovaný termín
-              <input type="text" name="time" placeholder="Např. příští úterý dopoledne">
+              <input type="text" name="time" id="booking-time" placeholder="Vyberte termín v kalendáři" readonly>
             </label>
             <label>
               Vaše zpráva
@@ -363,6 +394,7 @@
       </section>
     </main>
 
+    <script src="booking-data.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
